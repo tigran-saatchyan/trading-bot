@@ -1,0 +1,54 @@
+[project]
+name = "trading-bot"
+version = "0.1.0"
+description = "AI-powered trading bot"
+authors = [
+    {name = "Tigran Saatchyan",email = "you@example.com"}
+]
+readme = "README.md"
+dependencies = [
+    "requests (>=2.32.3,<3.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "numpy (>=2.2.5,<3.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+    "redis (>=5.2.1,<6.0.0)",
+    "sqlalchemy (>=2.0.40,<3.0.0)",
+    "yfinance (>=0.2.56,<0.3.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "trading-bot"
+description = "AI-powered trading bot"
+authors = ["Tigran Saatchyan <you@example.com>"]
+version = "0.1.0"
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.11.7"
+mypy = "^1.15.0"
+pre-commit = "^4.2.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+pytest = "^8.3.5"
+pytest-mock = "^3.14.0"
+pandas-stubs = "^2.2.3.250308"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
